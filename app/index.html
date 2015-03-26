@@ -1,173 +1,346 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/icomoon.css">
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Jason Awbrey | Baritone</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger"></label>
+    <header>
+      <nav>
+        <ul>
+          <li class="home"><a href="/" class="home">Home</a></li>
+          <li><a href="#biography" class="biography">Biography</a></li>
+          <li><a href="#audio" class="audio">Audio</a></li>
+          <li><a href="#quotes" class="quotes">Quotes</a></li>
+          <li><a href="#reviews" class="reviews">Reviews</a></li>
+          <li><a href="#repertoire" class="repertoire">Repertoire</a></li>
+          <li><a href="#upcoming" class="upcoming">Upcoming</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <section id="hero" class="module module--hero">
+        <div class="videoWrap">
+          <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <source src="video/ja-video-30.mp4" type="video/mp4">
+            <!--<source src="movie.webm" type="video/webm">-->
+              Sorry, your browser does not support HTML5 video.
+          </video>
+        </div>
+        <div class="container">
+          <h1><span>Jason<b>Awbrey</b></span></h1>
+          <p><span>Baritone</span></p>
+        </div>
+      </section>
+
+      <section id="biography" class="module module--biography">
+        <div class="container">
+          <h2 class="title">Biography</h2>
+          <img src="images/jason-awbrey-headshot.jpg" class="headshot" />
+          <div ng-bind-html="bio" class="container--bio">
+            <p>Heralded as having &#8220;one of the most gorgeous baritones on earth&#8221; by the Dallas Morning News, baritone Jason Awbrey is a highly sought after concert singer. His lyric voice has garnered critical acclaim for his performances of literature ranging from the early Renaissance period through the 21th century. He has performed with professional ensembles throughout the US, Mexico, and Europe, including Ars Lyrica of Houston, Conspirare, Dallas Bach Society, Dallas Symphony, Rapides Symphony Orchestra, San Antonio Symphony, Northeast Symphony, Texas Camerata, The Orchestra of New Spain, Santa Fe Desert Chorale, Orpheus Chamber Singers and Vox Humana. Mr. Awbrey has recorded with the Orpheus Chamber Singers, Vox Humana on the Naoxs Label and the Grammy award-winning ensemble Conspirare on the Harmonia Mundi label. </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="audio" class="module module--audio">
+        <div class="container">
+          <h2 class="title">Audio</h2>
+          <div class="module module--sound">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/100312444&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+
+          <div class="module module--sound">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/108565950&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+
+          <div class="module module--sound">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/108500732&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+
+          <div class="module module--sound">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/49742665&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+
+          <div class="module module--sound">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/48289865&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+
+          <div class="module module--sound">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/43372289&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+
+          <div class="module module--sound">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/43372638&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+
+          <div class="module module--sound">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/41021709&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <div class="module--reviews">
         
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
-    </head>
-    <body id="skrollr-body">
-        <header>
-            <article class="banner hero clearfix">
-                <img src="images/IMG_4733.jpg">
-                <section class="container clearfix">
-                    <h3 data-100-top="top:25%;opacity:1" data-top="top:60%;opacity:0">Code. Sing. Play. Repeat.</h3>   
-                </section>
-            </article>
-            <article class="fixedNav clearfix bottom">
-                <section class="container">
-                    <h1><a href="#">Jason Awbrey</a></h1>
-                    <ul>
-                        <li><a href="#technologist" class="scroll">Technologist</a></li>
-                        <li><a href="#baritone" class="scroll">Baritone</a></li>
-                    </ul>
-                    <ul class="social">
-                        <li><a href="http://www.linkedin.com/in/jasonawbrey" target="_blank" class="fs1" aria-hidden="true" data-icon="&#xe00d;" title="LinkedIn"></a></li>
-                        <li><a href="https://github.com/jhawbrey" target="_blank" class="fs1" aria-hidden="true" data-icon="&#xe005;" title="GitHub"></a></li>
-                        <li><a href="http://twitter.com/jawbrey" target="_blank" class="fs1" aria-hidden="true" data-icon="&#xe00b;" title="Twitter"></a></li>
-                        <li><a href="https://soundcloud.com/jason-awbrey" target="_blank" class="fs1" aria-hidden="true" data-icon="&#xe003;" title="SoundCloud"></a></li>
-                    </ul>
-                </section>
-            </article>
-        </header>
+        <section id="quotes" class="module module--quotes">
+          <div class="container">
+            <h2 class="title">Quotes</h2>    
 
-        
-        <article id="about">
-            <section class="container contentSection">
-                <h3 data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">About</h3>
-                <p data-bottom-center="right:-200px;opacity:0;" data-center-center="right:0;opacity:1;">Coder, musician, husband, father, whiskey lover, fixie rider and whitewater raftin' fool (not necessarily in that order).</p>
-            </section>
-        </article>
+            <blockquote class="container--quote">
+              <span>Jason Awbrey's honeyed baritone was perfect.</span><br />
+              <cite>Dallas Morning News</cite>
+            </blockquote>
 
-        <article id="technologist">
-            <section class="banner technologist clearfix">
-                <section class="container clearfix">
-                    <h3 data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">The Technologist</h3>
-                    <div class="fs1 bannerIcn" aria-hidden="true" data-icon="&#xe00c;" title="The Technologist" data-730="left:200px;opacity:0;" data-900="left:0;opacity:1;"></div>
-                    <ul class="submenu" data-bottom-center="bottom:100px;opacity:0;" data-center-center="bottom:10px;opacity:1;">
-                        <li><a href="#baritoneBio" class="fs1" aria-hidden="true" data-icon="&#xe006;" title="Bio"><span>Bio</span></a></li>
-                        <li><a href="http://linkedin.com/in/jasonawbrey" target="_blank" class="fs1" aria-hidden="true" data-icon="&#xe00d;" title="Audio"><span>LinkedIn</span></a></li>
-                    </ul>
-                </section>
-            </section>
+            <blockquote class="container--quote">
+              <span>Jason Awbrey was a resonant and commanding soloist.</span><br />
+              <cite>Fort Worth Star-Telegram</cite>
+            </blockquote>
 
-            <section class="container contentSection" id="techBio">
-            
-                <h3 data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">Bio</h3>
-                <div class="fs1" aria-hidden="true" data-icon="&#xe006;" title="Bio" data-bottom-center="left:200px;opacity:0;" data-center-center="left:0;opacity:1;"></div>
-                <div data-bottom-center="top:100px;opacity:0;" data-center-center="top:0;opacity:1;">
-                    <p>Jason has over 14 years of experience in Information Technology with a focus on internet technologies. As a web developer, Jason has worked on a number of brands in numerous industries, including American Airlines, Chemistry.com, Cigna, the Dallas Mavericks, the Dallas Symphony Orchestra, FastSigns, FileMaker, FilesAnywhere, GoRVing.com, Landmark Theaters, Match.com, Michael Kors, Michaels, Patrón, Salvation Army, Thomasville, and Travelocity. Recent projects include a social eCommerce Facebook application and website for a Mark Cuban funded incubator/startup, several interactive television applications for the Yahoo Connected TV platform, and a Facebook dating application for Match.com.</p>
+            <blockquote class="container--quote">
+              <span>Jason Awbrey has one of the most gorgeous baritones on earth.</span><br />
+              <cite>Dallas Morning News</cite>
+            </blockquote>
 
-                    <p>His experience spans from database development through user interface development, but his true passion lies in exploring the possibilities of client side application development using JavaScript to build engaging user experiences on the web.</p>
+            <blockquote class="container--quote">
+              <span>Jason sang with heart rending beauty and sensitivity.</span><br />
+              <cite>Dallas Morning News</cite>
+            </blockquote>
 
-                    <p>For more information, visit my profile on <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/jasonawbrey" data-format="click" data-text="LinkedIn"></script> And connect with me.</p>
-                </div>
+            <blockquote class="container--quote">
+              <span>And the soloists, one after another, sang radiantly. Who wouldn't have been transfixed?</span><br />
+              <cite>Dallas Morning News</cite>
+            </blockquote>
 
-            </section> 
-        </article>
+            <blockquote class="container--quote">
+              <span>Jason Awbrey provided the baritone solo in a voice that would be coveted by most English cathedral choirs.</span><br />
+              <cite>Theater Jones</cite>
+            </blockquote>
 
-        <article id="baritone">
-            <section class="banner baritone clearfix">
-                
-                <section class="container clearfix">
+            <blockquote class="container--quote">
+              <span>Jason H. Awbrey's warmly intoned solo &hellip; worth the price of admission.</span><br />
+              <cite>Dallas Morning News</cite>
+            </blockquote>
+          </div>
+        </section>
+        <section id="reviews" class="module module--recentReviews">
+          <div class="container">
+            <h2 class="title">Recent Reviews</h2>  
 
-                    <h3 data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">The Baritone</h3>
-                    <img src="images/baritone.jpg" data-bottom-center="right:-200px;opacity:0;" data-center-center="right:0;opacity:1;">
-                    <ul class="submenu" data-bottom-center="bottom:200px;opacity:0;" data-center-center="bottom:50px;opacity:1;">
-                        <li><a href="#baritoneBio" class="fs1" aria-hidden="true" data-icon="&#xe006;" title="Bio"><span>Bio</span></a></li>
-                        <li><a href="#audio" class="fs1" aria-hidden="true" data-icon="&#xe000;" title="Audio"><span>Audio</span></a></li>
-                        <li><a href="#reviews" class="fs1" aria-hidden="true" data-icon="&#xe019;" title="Reviews"><span>Reviews</span></a></li>
-                    </ul>
-                </section>
-            </section>
+            <div class="review">
+              <div class="titleBlock">
+                <h3>German lieder elegantly sung by Jason Awbrey</h3>
+                <cite>Scott Cantrell, Dallas Morning News Classical Music Critic</cite>
+              </div>
+              <div class="container--review">
+                <p>Once in a great while there’s a singing voice so beautiful that we can’t quite imagine it’s coming out of a merely human throat. Jason Awbrey has a baritone like that.</p><p>Having admired his brief solos in groups like the Orpheus Chamber Singers, Dallas Bach Society and a church choir, I’ve long hoped he would do a song recital someday. Wishes were answered Sunday afternoon, at Zion Lutheran Church, thanks to the art-song series Voces Intimae. The program was billed as a tribute to the late German baritone Dietrich Fischer-Dieskau, whose innumerable recordings did so much to popularize German art songs, or lieder. Awbrey’s program featured repertory associated with his distinguished forebear: three Schubert songs and two song cycles, Beethoven’s An die ferne Geliebte and Schumann’s Dichterliebe.</p><p>From the first notes of Schubert’s &#8220;An Sylvia,&#8221; there was that sound: warmly rich below, rising to top notes either clarion or sweetly floated, as appropriate, everything finely focused. It soon struck me how much it resembled Fischer-Dieskau’s sound, but it may have been even more beautiful. The shift of tone at the words translated as &#8220;And the last ray dies/Behind that hilltop,&#8221; in the last of the Beethoven songs, was sheer magic.</p><p>Apart from a couple of forced high notes, and a few bottom notes wanting more oomph, everything sounded so easy, so natural, qualities most singers can only covet.</p><p>Few singers caress words so lovingly as Awbrey. With excellent German diction, although some consonants wanted more projection, he made texts as beautiful as melodies. As a friend said afterward, surely Fischer-Dieskau was smiling somewhere.</p><p>Awbrey flawlessly negotiated Schumann’s &#8220;Die Rose, die Lilie, die Taube, die Sonne&#8221; at quite a brisk speed, but &#8220;Ich will meine Seele&#8221; and the final &#8220;Die alten, bösen Lieder&#8221; felt a little hurried.</p><p>Brian Bentley accompanied competently most of the time, on a merely serviceable baby grand piano. But he was audibly stressed at some points in the Beethoven and he lagged behind Awbrey in a few places here and elsewhere. Those wonderful curling piano lines in the first of the Dichterliebe were dead on the vine.</p><p>The program book was a model of such things, with clearly printed texts and translations. But Voces Intimae representatives added to the ongoing plague of unnecessary blather at concerts. Really, folks, we don’t need to be told that the performers we’re about to hear, or have just heard, are great. But let’s hope they book Awbrey for another recital.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
-            <section class="container contentSection" id="baritoneBio">
-                <h3 data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">Bio</h3>
-                <div class="fs1" aria-hidden="true" data-icon="&#xe006;" title="Bio" data-bottom-center="left:200px;opacity:0;" data-center-center="left:0;opacity:1;"></div>
-                <div data-bottom-center="top:100px;opacity:0;" data-center-center="top:0;opacity:1;">
-                    <p>Jason Awbrey, baritone, has appeared with such performing organizations as the Dallas Bach Society, Ars Lyrica of Houston, Ft Worth Early Music, Orpheus Chamber Singers, Vox Humana, Orchestra of New Spain, Santa Fe Desert Chorale, Allen Philharmonic, Dallas Symphony, Northeast Symphony and the San Antonio Symphony.  His lyric voice has gained him solos in Handel’s <i>Messiah</i>, Haydn's <i>Creation</i>, Montiverdi’s <i>Vespers</i>, Carrisimi’s <i>Jephte</i>, Barber’s <i>Dover Beach</i>, Brahms’ <i>Ein Deutsches Requiem</i>, Fauré’s <i>Requiem</i>, Duruflé’s <i>Requiem</i> and Messe <i>‘Cum Jubilo’</i>, Howells’ <i>Requiem</i>, the Bach Passions, numerous Bach cantatas, Bach’s <i>Weihnachts-Oratorium</i>, and Vaughan Williams’ <i>Fantasia on Christmas Carols</i>.</p>
+      <section id="repertoire" class="module module--repertoire">
+        <div class="container">
+          <h2 class="title">Repertoire</h2>
+          
+          <ul class="js-masonry" data-masonry-options='{ "transitionDuration" : "0.2s" , "itemSelector" : ".brick"}'>
+            <li masonry-tile class="repCnt brick">
+              <h3>J.S. Bach</h3>
+              <ul>
+                <li>Johannes-Passion</li>
+                <li>Matthäus-Passion</li>
+                <li>Messe in h-Moll</li>
+                <li>Weihnachts-Oratorium</li>
+                <li>BWV 4: Christ lag in Todes Banden</li>
+                <li>BWV 78: Jesu, der du meine Seele</li>
+                <li>BWV 80: Ein feste Burg ist unser Gott</li>
+                <li>BWV 106: Gottes Zeit ist die allerbeste Zeit</li>
+                <li>BWV 131: Aus der Tiefen rufe ich, Herr, zu dir</li>
+                <li>BWV 140: Wachet auf, ruft uns die Stimme</li>
+                <li>BWV 211: Schweigt stille, plaudert nicht</li>
+                <li>BWV 212: Mer hahn en neue Oberkeet</li>
+              </ul>
+            </li>
 
-                    <p>Heralded as having “one of the most gorgeous baritones on earth” by the Dallas Morning News, Jason has garnered much critical acclaim for his interpretations of music from the 17th through 21st century. After a recent recital of German lieder, The Dallas Morning News wrote "everything sounded so easy, so natural" and "[it] was sheer magic." In a performance of Schütz’s <i>Die sieben Worte Jesu Christi am Kreuz</i>, Scott Cantrell of the Dallas Morning News said Mr. Awbrey sang “with heartrending beauty and sensitivity.” The Fort Worth Star-Telegram wrote “Baritone Jason Awbrey was a resonant and commanding soloist” in a performance of Copland’s <i>Old American Songs</i>.</p>
+            <li masonry-tile class="repCnt brick">
+              <h3>Samuel Barber</h3>
+              <ul>
+                <li>Dover Beach</li>
+              </ul>
+            </li>
 
-                    <p>Mr. Awbrey can be heard on a number of recordings with the Church of the Incarnation choir, Orpheus Chamber Singers, and a recently released recording on the Naxos label with Vox Humana. Those recordings include a CD of music by Orlando Gibbons, the masses of Howells, Kodály, and Langlais, Duruflé’s <i>Requiem</i> with Jason as the baritone soloist, and a Magnificat and Nunc Dimittis setting written by Joel Martinson dedicated to Mr. Awbrey and his wife Monica.</p>
-                </div>
-            <section>
+            <li masonry-tile class="repCnt brick">
+              <h3>Johannes Brahms</h3>
+              <ul>
+                <li>Requiem</li>
+              </ul>
+            </li>
 
-            <section id="audio" class="container contentSection">
-                <h3 data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">Audio</h3>
-                <div class="fs1" aria-hidden="true" data-icon="&#xe000;" title="Audio" data-bottom-center="left:200px;opacity:0;" data-center-center="left:0;opacity:1;"></div>
-                <iframe class="iframe"
-                    width="65%"
-                    height="590"
-                    scrolling="no"
-                    frameborder="no"
-                    src="http://w.soundcloud.com/player/?url=http://api.soundcloud.com/jason-awbrey&auto_play=false&buying=false&liking=true&download=false&sharing=true&show_artwork=true&show_comments=false&show_playcount=false&show_user=true&start_track=0&callback=true" data-bottom-center="top:100px;opacity:0;" data-center-center="top:0;opacity:1;" style="position:relative;">
-                </iframe>
-            </section>
+            <li masonry-tile class="repCnt brick">
+              <h3>William Boyce</h3>
+              <ul>
+                <li>The Chaplet</li>
+              </ul>
+            </li>
 
-            <section class="container contentSection" id="reviews">
-                <h3 data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">Recent Reviews</h3>
-                <div class="fs1" aria-hidden="true" data-icon="&#xe019;" title="Reviews" data-bottom-center="right:-200px;opacity:0;" data-center-center="right:0;opacity:1;"></div>
-                <h4 data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;" style="position:relative;"><a href="#" class="review">Classical music review: German lieder elegantly sung by Jason Awbrey</a></h4>
-                <div data-bottom-center="top:100px;opacity:0;" data-center-center="top:0;opacity:1;" style="position:relative;">
-                    <p><i>Scott Cantrell, Dallas Morning News Classical Music Critic</i></p>
-                    <p>Once in a great while there’s a singing voice so beautiful that we can’t quite imagine it’s coming out of a merely human throat. Jason Awbrey has a baritone like that.</p>
-                    <p>Having admired his brief solos in groups like the Orpheus Chamber Singers, Dallas Bach Society and a church choir, I’ve long hoped he would do a song recital someday. Wishes were answered Sunday afternoon, at Zion Lutheran Church, thanks to the art-song series Voces Intimae. The program was billed as a tribute to the late German baritone Dietrich Fischer-Dieskau, whose innumerable recordings did so much to popularize German art songs, or lieder. Awbrey’s program featured repertory associated with his distinguished forebear: three Schubert songs and two song cycles, Beethoven’s <i>An die ferne Geliebte</i> and Schumann’s <i>Dichterliebe</i>.</p>
-                    <p>From the first notes of Schubert’s “<i>An Sylvia</i>,” there was that sound: warmly rich below, rising to top notes either clarion or sweetly floated, as appropriate, everything finely focused. It soon struck me how much it resembled Fischer-Dieskau’s sound, but it may have been even more beautiful. The shift of tone at the words translated as “And the last ray dies/Behind that hilltop,” in the last of the Beethoven songs, was sheer magic.</p>
-                    <p>Apart from a couple of forced high notes, and a few bottom notes wanting more oomph, everything sounded so easy, so natural, qualities most singers can only covet.
-                    <p>Few singers caress words so lovingly as Awbrey. With excellent German diction, although some consonants wanted more projection, he made texts as beautiful as melodies. As a friend said afterward, surely Fischer-Dieskau was smiling somewhere.</p>
-                    <p>Awbrey flawlessly negotiated Schumann’s <i>“Die Rose, die Lilie, die Taube, die Sonne”</i> at quite a brisk speed, but <i>“Ich will meine Seele”</i> and the final <i>“Die alten, bösen Lieder”</i> felt a little hurried.</p>
-                    <p>Brian Bentley accompanied competently most of the time, on a merely serviceable baby grand piano. But he was audibly stressed at some points in the Beethoven and he lagged behind Awbrey in a few places here and elsewhere. Those wonderful curling piano lines in the first of the Dichterliebe were dead on the vine.</p>
-                    <p>The program book was a model of such things, with clearly printed texts and translations. But Voces Intimae representatives added to the ongoing plague of unnecessary blather at concerts. Really, folks, we don’t need to be told that the performers we’re about to hear, or have just heard, are great. But let’s hope they book Awbrey for another recital.</p>
-                </div>
-            </section>
+            <li masonry-tile class="repCnt brick">
+              <h3>Giacomo Carissimi</h3>
+              <ul>
+                <li>Jephte</li>
+              </ul>
+            </li>
 
-            <section class="container contentSection" id="quotes">
-                <h3 data-bottom-center="left:-25px;opacity:0;" data-center-center="left:0;opacity:1;">Quotes</h3>
-                <ul class="quotes">
-                    <li data-bottom-center="left:200px;opacity:0;" data-center-center="left:0;opacity:1;">&#8220;Jason Awbrey's honeyed baritone was perfect&#8221; <span>- Dallas Morning News</span></li>
-                    <li data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">&#8220;Jason Awbrey has one of the most gorgeous baritones on earth.&#8221; <span>- Dallas Morning News</span></li>
-                    <li data-bottom-center="left:200px;opacity:0;" data-center-center="left:0;opacity:1;">&#8220;And the soloists, one after another, sang radiantly. Who wouldn't have been transfixed?&#8221; <span>- Dallas Morning News</span></li>
-                    <li data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">&#8220;Jason H. Awbrey's warmly intoned solo &hellip; worth the price of admission.&#8221; <span>- Dallas Morning News</span></li>
-                    <li data-bottom-center="left:200px;opacity:0;" data-center-center="left:0;opacity:1;">&#8220;Jason Awbrey was a resonant and commanding soloist.&#8221; <span>- Fort Worth Star-Telegram</span></li>
-                    <li data-bottom-center="left:-200px;opacity:0;" data-center-center="left:0;opacity:1;">&#8220;Jason sang with heart rending beauty and sensitivity.&#8221; <span>- Dallas Morning News</span></li>
-                    <li data-bottom-center="left:200px;opacity:0;" data-center-center="left:0;opacity:1;">&#8220;Jason Awbrey provided the baritone solo in a voice that would be coveted by most English cathedral choirs.&#8221; <span>- Theatre Jones</span></li>
-                </ul>
-            </section>
-        </article>
+            <li masonry-tile class="repCnt brick">
+              <h3>Bob Chilcott</h3>
+              <ul>
+                <li>St. John Passion<br /><i>American Premiere, Bob Chilcott Conducting</i></li>
+              </ul>
+            </li>
 
-        
+            <li masonry-tile class="repCnt brick">
+              <h3>Maurice Durufle</h3>
+              <ul>
+                <li>Messe <i>'Cum Jublio'</i></li>
+                <li>Requiem</li>
+              </ul>
+            </li>
 
-        
+            <li masonry-tile class="repCnt brick">
+              <h3>Gabriel Faure</h3>
+              <ul>
+                <li>Requiem</li>
+              </ul>
+            </li>
 
-        
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+            <li masonry-tile class="repCnt brick">
+              <h3>G.F. Handel</h3>
+              <ul>
+                <li>Messiah</li>
+              </ul>
+            </li>
 
-        <!-- build:js scripts/main.js -->
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-        <!-- endbuild -->
+            <li masonry-tile class="repCnt brick">
+              <h3>Joseph Haydn</h3>
+              <ul>
+                <li>Creation</li>
+              </ul>
+            </li>
+
+            <li masonry-tile class="repCnt brick">
+              <h3>Herbert Howells</h3>
+              <ul>
+                <li>Requiem</li>
+              </ul>
+            </li>
+
+            <li masonry-tile class="repCnt brick">
+              <h3>Claudio Monteverdi</h3>
+              <ul>
+                <li>Vespero della Beata Vergine 1610</li>
+              </ul>
+            </li>
+
+            <li masonry-tile class="repCnt brick">
+              <h3>W.A. Mozart</h3>
+              <ul>
+                <li>Requiem</li>
+                <li>Coronation Mass</li>
+              </ul>
+            </li>
+
+            <li masonry-tile class="repCnt brick">
+              <h3>Henry Purcell</h3>
+              <ul>
+                <li>Fairy Queen</li>
+                <li>Hail! Bright Cecilia</li>
+              </ul>
+            </li>
+
+            <li masonry-tile class="repCnt brick">
+              <h3>Heinrich Schutz</h3>
+              <ul>
+                <li>Die sieben Worte Jesu Christi am Kreuz</li>
+              </ul>
+            </li>
+
+            <li masonry-tile class="repCnt brick">
+              <h3>Raph Vaughan Williams</h3>
+              <ul>
+                <li>Fantasia on Christmas Carols</li>
+                <li>Five Mystical Songs</li>
+                <li>Hodie</li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <section id="upcoming" class="module module--upcoming">
+        <div class="container">
+          <h2 class="title">Next Concert</h2>
+        </div>
+        <div id="map"></div>
+      </section>
+
+      <section class="module module--footer">
+        <footer>
+          <div class="container">
+            <p class="copyright"></p>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/get-style-property/get-style-property.js"></script>
+    <script src="bower_components/get-size/get-size.js"></script>
+    <script src="bower_components/eventie/eventie.js"></script>
+    <script src="bower_components/doc-ready/doc-ready.js"></script>
+    <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+    <script src="bower_components/matches-selector/matches-selector.js"></script>
+    <script src="bower_components/outlayer/item.js"></script>
+    <script src="bower_components/outlayer/outlayer.js"></script>
+    <script src="bower_components/masonry/masonry.js"></script>
+    <script src="bower_components/jquery-tiny-pubsub/dist/ba-tiny-pubsub.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-31426780-1');ga('send','pageview');
+    </script>
+
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/app.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
