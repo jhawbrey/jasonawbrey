@@ -28,7 +28,7 @@
     if($trigger.prop('checked')) {
     	$trigger.attr('checked', false);
     }
-    
+
     $('nav li a').removeClass('active');
 	$(this).addClass('active');
     $root.animate({
@@ -37,7 +37,7 @@
         window.location.hash = href;
     });
     return false;
-    
+
   });
 
 })(jQuery, window, document);
@@ -53,19 +53,19 @@
 
 ;(function($, window, document, undefined) {
   L.mapbox.accessToken = 'pk.eyJ1IjoiamF3YnJleSIsImEiOiJnWFZxZDFJIn0.J8gkh8-6O-toLs5zD6wB-w';
-  var map = L.mapbox.map('map', 'jawbrey.gafj3efk');
-  map.setView([30.286475, -97.731209], 15);
+  var map = L.mapbox.map('map', 'jawbrey.n9le2i3f');
+  map.setView([32.8515, -96.759], 15);
 
   // Build a marker from a simple GeoJSON object:
   var marker = L.mapbox.featureLayer({
       type: 'Feature',
       geometry: {
           type: 'Point',
-          coordinates: [-97.731209, 30.286475]
+          coordinates: [-96.759, 32.8515]
       },
       properties: {
-        title: '<h3 style="text-align:center;">Nico Muhly: How Little You Are</h3>',
-        description: '<div style="width:100%;text-align:center;">Conspirare @ Bass Concert Hall<br />April 18, 2015, 8 PM<br />More info at <a href="http://conspirare.org/event/nico-muhlys-how-little-you-are/">conspirare.org</a>.</div>',
+        title: '<h3 style="text-align:center;">Nature\'s Song</h3>',
+        description: '<div style="width:100%;text-align:center;">CCGD @ Zion Lutheran Church<br />October 4, 3:30 PM<br />Jason Awbrey, baritone; Erika Kinser, piano<br />More info at <a href="http://www.thechildrenschorus.org/current-season.html">thechildrenschorus.org</a>.</div>',
         'marker-size': 'large',
         'marker-color': '#548cba',
       }
@@ -126,14 +126,14 @@
 	$.subscribe('section.active', setActive('section.active'));
 
 	$win.on('scroll', function() {
-		
+
 		if(document.elementFromPoint(0, 49).id) {
 			el = document.elementFromPoint(0, 49).id;
 		}
 		if(active !== el) {
 			active = el;
 			$.publish('section.active', el);
-		} 
+		}
 	});
 
 
@@ -156,8 +156,3 @@
   	$('footer .copyright').html('&copy;' + currYear + ' Jason Awbrey. All rights reserved.');
 
 })(jQuery, window, document);
-
-
-
-
-
