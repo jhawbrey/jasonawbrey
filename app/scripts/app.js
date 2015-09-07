@@ -49,7 +49,7 @@
 /**
  * Map
  * --------------------------------------------------
- */
+ *
 
 ;(function($, window, document, undefined) {
   L.mapbox.accessToken = 'pk.eyJ1IjoiamF3YnJleSIsImEiOiJnWFZxZDFJIn0.J8gkh8-6O-toLs5zD6wB-w';
@@ -84,7 +84,7 @@
   });
 })(jQuery, window, document);
 
-
+*/
 
 
 
@@ -141,6 +141,315 @@
 
 
 
+/**
+ * Map
+ * --------------------------------------------------
+ */
+
+;(function($, window, document, undefined) {
+  'use strict';
+
+  L.mapbox.accessToken = 'pk.eyJ1IjoiamF3YnJleSIsImEiOiJnWFZxZDFJIn0.J8gkh8-6O-toLs5zD6wB-w';
+  var geojson = [
+      {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.759208,
+                32.851958
+              ]
+            },
+            "properties": {
+              "organization": "Children's Chorus of Greater Dallas",
+              "date": "Oct 4, 2015",
+              "time": "3:30 pm",
+              "title": "Nature's Song",
+              "url":"",
+              "venue":"Zion Lutheran Church",
+              "address": "6121 E Lovers Ln",
+              "city": "Dallas",
+              "country": "United States",
+              "crossStreet": "at 15th St NW",
+              "state": "TX"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.376348,
+                34.004277
+              ]
+            },
+            "properties": {
+              "organization": "Vox Humana",
+              "date": "Oct 8, 2015",
+              "time": "7:30 pm",
+              "title": "Sing Joyfully",
+              "url":"",
+              "venue":"Southeastern Oklahoma State University",
+              "address": "1405 N 4th Ave",
+              "city": "Durant",
+              "country": "United States",
+              "state": "OK"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.723976,33.17728
+              ]
+            },
+            "properties": {
+              "organization": "Vox Humana",
+              "date": "Oct 10, 2015",
+              "time": "7:30 pm",
+              "title": "Sing Joyfully",
+              "url":"",
+              "venue":"St. Francis of Assisi Catholic Church",
+              "address": "8000 W. Eldorado Parkway",
+              "city": "Frisco",
+              "country": "United States",
+              "state": "TX"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.80302,32.858893
+              ]
+            },
+            "properties": {
+              "organization": "Vox Humana",
+              "date": "Oct 11, 2015",
+              "time": "6:00 pm",
+              "title": "Sing Joyfully",
+              "url":"",
+              "venue":"University Park United Methodist Church",
+              "address": "4024 Caruth Blvd",
+              "city": "Dallas",
+              "country": "United States",
+              "state": "TX"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.796489,32.790807
+              ]
+            },
+            "properties": {
+              "organization": "Orpheus Chambers Singers",
+              "date": "Oct 18, 2015",
+              "time": "7:00 pm",
+              "title": "Masterworks Ancient & Modern",
+              "url":"",
+              "venue":"City Performance Hall",
+              "address": "2520 Flora Street",
+              "city": "Dallas",
+              "country": "United States",
+              "state": "TX"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.754983,32.832916
+              ]
+            },
+            "properties": {
+              "organization": "Vox Humana",
+              "date": "Dec 5, 2015",
+              "time": "7:30 pm",
+              "title": "Serenity",
+              "url":"",
+              "venue":"St. Thomas Aquinas Catholic Church",
+              "address": "6306 Kenwood Ave",
+              "city": "Dallas",
+              "country": "United States",
+              "state": "TX"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.80302,32.858893
+              ]
+            },
+            "properties": {
+              "organization": "Vox Humana",
+              "date": "Dec 6, 2015",
+              "time": "4:00 pm",
+              "title": "Holiday Pops",
+              "url":"",
+              "venue":"University Park United Methodist Church",
+              "address": "4024 Caruth Boulevard",
+              "city": "Dallas",
+              "country": "United States",
+              "state": "TX"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.787448,32.940838
+              ]
+            },
+            "properties": {
+              "organization": "Orpheus Chamber Singers",
+              "date": "Dec 17, 2015",
+              "time": "8:00 pm",
+              "title": "An Orpheus Christmas",
+              "url":"",
+              "venue":"Episcopal Church of the Transfiguration",
+              "address": "14115 Hillcrest",
+              "city": "Dallas",
+              "country": "United States",
+              "state": "TX"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.754983,32.832916
+              ]
+            },
+            "properties": {
+              "organization": "Orpheus Chamber Singers",
+              "date": "Dec 19, 2015",
+              "time": "7:00 pm",
+              "title": "An Orpheus Christmas",
+              "url":"",
+              "venue":"Saint Thomas Aquinas Catholic Church",
+              "address": "6306 Kenwood",
+              "city": "Dallas",
+              "country": "United States",
+              "state": "TX"
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -96.650572,33.121957
+              ]
+            },
+            "properties": {
+              "organization": "Orpheus Chamber Singers",
+              "date": "Dec 20, 2015",
+              "time": "7:00 pm",
+              "title": "An Orpheus Christmas",
+              "url":"",
+              "venue":"Saint Jude Catholic Church",
+              "address": "1515 N Greenville Ave",
+              "city": "Allen",
+              "country": "United States",
+              "state": "TX"
+            }
+          }
+        ]
+      }
+  ];
+  var map = L.mapbox.map('map', 'examples.map-i80bb8p3')
+  .setView([32.851958, -96.759208], 16);
+
+  map.scrollWheelZoom.disable();
+
+  var listings = document.getElementById('listings');
+  var locations = L.mapbox.featureLayer().addTo(map);
+
+  locations.setGeoJSON(geojson);
+
+  function setActive(el) {
+    var siblings = listings.getElementsByTagName('div');
+    for (var i = 0; i < siblings.length; i++) {
+      siblings[i].className = siblings[i].className
+      .replace(/active/, '').replace(/\s\s*$/, '');
+    }
+
+    el.className += ' active';
+  }
+
+  locations.eachLayer(function(locale) {
+
+    // Shorten locale.feature.properties to just `prop` so we're not
+    // writing this long form over and over again.
+    var prop = locale.feature.properties;
+
+    // Each marker on the map.
+    var popup = '<h3>' + prop.venue + '</h3><div>' + prop.address;
+
+    var listing = listings.appendChild(document.createElement('div'));
+    listing.className = 'item';
+
+    //var eventDate = lists
+
+    var link = listing.appendChild(document.createElement('a'));
+    link.href = '#';
+    link.className = 'title';
+
+    link.innerHTML = prop.title;
+    if (prop.date) {
+      link.innerHTML += '<br /><small class="quiet">' + prop.organization + '</small>';
+      popup += '<br /><small class="quiet">' + prop.date + ' &middot; ' + prop.time + '</small>';
+      popup += '<br/><small class="quiet"><a href="#">More info &raquo;</a></small>';
+    }
+
+    var details = listing.appendChild(document.createElement('div'));
+    details.innerHTML = prop.city + ', ' + prop.state;
+
+
+    link.onclick = function() {
+      setActive(listing);
+
+      // When a menu item is clicked, animate the map to center
+      // its associated locale and open its popup.
+      map.setView(locale.getLatLng(), 16);
+      locale.openPopup();
+      return false;
+    };
+
+    // Marker interaction
+    locale.on('click', function(e) {
+      // 1. center the map on the selected marker.
+      map.panTo(locale.getLatLng());
+
+      // 2. Set active the markers associated listing.
+      setActive(listing);
+    });
+
+    popup += '</div>';
+    locale.bindPopup(popup);
+
+    locale.setIcon(L.icon({
+      iconUrl: 'images/marker.png',
+      iconSize: [56, 56],
+      iconAnchor: [28, 28],
+      popupAnchor: [0, -34]
+    }));
+
+  });
+})(jQuery, window, document);
 
 
 /**
