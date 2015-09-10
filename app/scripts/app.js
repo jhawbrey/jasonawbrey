@@ -165,6 +165,7 @@
             },
             "properties": {
               "organization": "Children's Chorus of Greater Dallas",
+              "timestamp":"2015-10-04T15:30",
               "date": "Oct 4, 2015",
               "time": "3:30 pm",
               "title": "Nature's Song",
@@ -188,6 +189,7 @@
             },
             "properties": {
               "organization": "Vox Humana",
+              "timestamp":"2015-10-08T19:30",
               "date": "Oct 8, 2015",
               "time": "7:30 pm",
               "title": "Sing Joyfully",
@@ -209,6 +211,7 @@
             },
             "properties": {
               "organization": "Vox Humana",
+              "timestamp":"2015-10-10T19:30",
               "date": "Oct 10, 2015",
               "time": "7:30 pm",
               "title": "Sing Joyfully",
@@ -230,6 +233,7 @@
             },
             "properties": {
               "organization": "Vox Humana",
+              "timestamp":"2015-10-11T18:00",
               "date": "Oct 11, 2015",
               "time": "6:00 pm",
               "title": "Sing Joyfully",
@@ -251,6 +255,7 @@
             },
             "properties": {
               "organization": "Orpheus Chambers Singers",
+              "timestamp":"2015-10-18T19:00",
               "date": "Oct 18, 2015",
               "time": "7:00 pm",
               "title": "Masterworks Ancient & Modern",
@@ -272,6 +277,7 @@
             },
             "properties": {
               "organization": "Vox Humana",
+              "timestamp":"2015-12-05T19:30",
               "date": "Dec 5, 2015",
               "time": "7:30 pm",
               "title": "Serenity",
@@ -293,6 +299,7 @@
             },
             "properties": {
               "organization": "Vox Humana",
+              "timestamp":"2015-12-06T16:00",
               "date": "Dec 6, 2015",
               "time": "4:00 pm",
               "title": "Holiday Pops",
@@ -314,6 +321,7 @@
             },
             "properties": {
               "organization": "Orpheus Chamber Singers",
+              "timestamp":"2015-12-17T20:00",
               "date": "Dec 17, 2015",
               "time": "8:00 pm",
               "title": "An Orpheus Christmas",
@@ -335,6 +343,7 @@
             },
             "properties": {
               "organization": "Orpheus Chamber Singers",
+              "timestamp":"2015-12-19T19:00",
               "date": "Dec 19, 2015",
               "time": "7:00 pm",
               "title": "An Orpheus Christmas",
@@ -356,6 +365,7 @@
             },
             "properties": {
               "organization": "Orpheus Chamber Singers",
+              "timestamp":"2015-12-20T19:00",
               "date": "Dec 20, 2015",
               "time": "7:00 pm",
               "title": "An Orpheus Christmas",
@@ -395,9 +405,17 @@
     // Shorten locale.feature.properties to just `prop` so we're not
     // writing this long form over and over again.
     var prop = locale.feature.properties;
+    if(prop.timestamp) {
+      var datetime = new Date(prop.timestamp).toString().split(" ");
+      prop.day = datetime[2];
+      prop.month = datetime[1];
+    }
 
     // Each marker on the map.
     var popup = '<h3>' + prop.venue + '</h3><div>' + prop.address;
+    popup += '<br /><small class="quiet">' + prop.date + ' &middot; ' + prop.time + '</small>';
+    popup += '<br/><small class="quiet"><a href="#">More info &raquo;</a></small>';
+
 
     var listing = listings.appendChild(document.createElement('div'));
     listing.className = 'item';
@@ -410,9 +428,8 @@
 
     link.innerHTML = prop.title;
     if (prop.date) {
+      link.innerHTML += '<div class="date"><span class="day">' + prop.day + '</span>' + prop.month + '</div>';
       link.innerHTML += '<br /><small class="quiet">' + prop.organization + '</small>';
-      popup += '<br /><small class="quiet">' + prop.date + ' &middot; ' + prop.time + '</small>';
-      popup += '<br/><small class="quiet"><a href="#">More info &raquo;</a></small>';
     }
 
     var details = listing.appendChild(document.createElement('div'));

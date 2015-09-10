@@ -714,6 +714,21 @@ header {
       overflow:hidden;
       border-right:1px solid rgba(0,0,0,0.25);
     }
+    .date {
+      float:left;
+      background:#00853e;
+      line-height:24px;
+      margin-right:10px;
+      width:72px;
+      height:72px;
+      text-align:center;
+      color:#fff;
+      .day {
+        padding-top:17px;
+        font-size:36px;
+        display:block;
+      }
+    }
   }
   .pad2 {
     padding:20px;
@@ -763,9 +778,8 @@ header {
     text-align:left;
   }
   .listings .item .title small { font-weight:400; }
-  .listings .item.active .title,
   .listings .item .title:hover { color:#8cc63f; }
-  .listings .item.active {
+  .listings .item.active, .listings .item:hover {
     background-color:#f8f8f8;
   }
 
