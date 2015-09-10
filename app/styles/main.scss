@@ -697,7 +697,9 @@ header {
     background:#fff;
     position:relative;
     width:100%;
-    height:600px;
+    @include mq-above($mq-medium) {
+      height:700px;
+    }
 
   }
 
@@ -706,7 +708,7 @@ header {
     width:100%;
     overflow:hidden;
     border-top:1px solid rgba(0,0,0,0.25);
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $mq-medium) {
       position:absolute;
       width:33.3333%;
       height:100%;
