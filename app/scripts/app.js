@@ -169,7 +169,7 @@
               "date": "Oct 4, 2015",
               "time": "3:30 pm",
               "title": "Nature's Song",
-              "url":"",
+              "url":"http://www.thechildrenschorus.org/current-season.html",
               "venue":"Zion Lutheran Church",
               "address": "6121 E Lovers Ln",
               "city": "Dallas",
@@ -193,7 +193,7 @@
               "date": "Oct 8, 2015",
               "time": "7:30 pm",
               "title": "Sing Joyfully",
-              "url":"",
+              "url":"http://voxhumanatx.com/",
               "venue":"Southeastern Oklahoma State University",
               "address": "1405 N 4th Ave",
               "city": "Durant",
@@ -215,7 +215,7 @@
               "date": "Oct 10, 2015",
               "time": "7:30 pm",
               "title": "Sing Joyfully",
-              "url":"",
+              "url":"http://voxhumanatx.com/",
               "venue":"St. Francis of Assisi Catholic Church",
               "address": "8000 W. Eldorado Parkway",
               "city": "Frisco",
@@ -237,7 +237,7 @@
               "date": "Oct 11, 2015",
               "time": "6:00 pm",
               "title": "Sing Joyfully",
-              "url":"",
+              "url":"http://voxhumanatx.com/",
               "venue":"University Park United Methodist Church",
               "address": "4024 Caruth Blvd",
               "city": "Dallas",
@@ -259,7 +259,7 @@
               "date": "Oct 18, 2015",
               "time": "7:00 pm",
               "title": "Masterworks Ancient & Modern",
-              "url":"",
+              "url":"http://www.orpheuschambersingers.org/events/special-events/",
               "venue":"City Performance Hall",
               "address": "2520 Flora Street",
               "city": "Dallas",
@@ -281,7 +281,7 @@
               "date": "Dec 5, 2015",
               "time": "7:30 pm",
               "title": "Serenity",
-              "url":"",
+              "url":"http://voxhumanatx.com/",
               "venue":"St. Thomas Aquinas Catholic Church",
               "address": "6306 Kenwood Ave",
               "city": "Dallas",
@@ -303,7 +303,7 @@
               "date": "Dec 6, 2015",
               "time": "4:00 pm",
               "title": "Holiday Pops",
-              "url":"",
+              "url":"http://voxhumanatx.com/",
               "venue":"University Park United Methodist Church",
               "address": "4024 Caruth Boulevard",
               "city": "Dallas",
@@ -325,7 +325,7 @@
               "date": "Dec 17, 2015",
               "time": "8:00 pm",
               "title": "An Orpheus Christmas",
-              "url":"",
+              "url":"http://www.orpheuschambersingers.org/events/special-events/",
               "venue":"Episcopal Church of the Transfiguration",
               "address": "14115 Hillcrest",
               "city": "Dallas",
@@ -347,7 +347,7 @@
               "date": "Dec 19, 2015",
               "time": "7:00 pm",
               "title": "An Orpheus Christmas",
-              "url":"",
+              "url":"http://www.orpheuschambersingers.org/events/special-events/",
               "venue":"Saint Thomas Aquinas Catholic Church",
               "address": "6306 Kenwood",
               "city": "Dallas",
@@ -369,7 +369,7 @@
               "date": "Dec 20, 2015",
               "time": "7:00 pm",
               "title": "An Orpheus Christmas",
-              "url":"",
+              "url":"http://www.orpheuschambersingers.org/events/special-events/",
               "venue":"Saint Jude Catholic Church",
               "address": "1515 N Greenville Ave",
               "city": "Allen",
@@ -383,6 +383,10 @@
   var map = L.mapbox.map('map', 'examples.map-i80bb8p3')
   .setView([32.851958, -96.759208], 16);
 
+  // Disable drag and zoom handlers.
+  map.dragging.disable();
+  map.touchZoom.disable();
+  map.doubleClickZoom.disable();
   map.scrollWheelZoom.disable();
 
   var listings = document.getElementById('listings');
@@ -414,7 +418,7 @@
     // Each marker on the map.
     var popup = '<h3>' + prop.venue + '</h3><div>' + prop.address;
     popup += '<br /><small class="quiet">' + prop.date + ' &middot; ' + prop.time + '</small>';
-    popup += '<br/><small class="quiet"><a href="#">More info &raquo;</a></small>';
+    popup += '<br/><small class="quiet"><a href="' + prop.url + '">More info &raquo;</a></small>';
 
 
     var listing = listings.appendChild(document.createElement('div'));
