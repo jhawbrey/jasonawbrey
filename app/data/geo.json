@@ -1,0 +1,252 @@
+[
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.759208,
+              32.851958
+            ]
+          },
+          "properties": {
+            "organization": "Children's Chorus of Greater Dallas",
+            "timestamp":"2015-10-04T15:30",
+            "date": "Oct 4, 2015",
+            "time": "3:30 pm",
+            "title": "Nature's Song",
+            "url":"http://www.thechildrenschorus.org/current-season.html",
+            "venue":"Zion Lutheran Church",
+            "address": "6121 E Lovers Ln",
+            "city": "Dallas",
+            "country": "United States",
+            "crossStreet": "at 15th St NW",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.376348,
+              34.004277
+            ]
+          },
+          "properties": {
+            "organization": "Vox Humana",
+            "timestamp":"2015-10-08T19:30",
+            "date": "Oct 8, 2015",
+            "time": "7:30 pm",
+            "title": "Sing Joyfully",
+            "url":"http://voxhumanatx.com/",
+            "venue":"Southeastern Oklahoma State University",
+            "address": "1405 N 4th Ave",
+            "city": "Durant",
+            "country": "United States",
+            "state": "OK"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.723976,33.17728
+            ]
+          },
+          "properties": {
+            "organization": "Vox Humana",
+            "timestamp":"2015-10-10T19:30",
+            "date": "Oct 10, 2015",
+            "time": "7:30 pm",
+            "title": "Sing Joyfully",
+            "url":"http://voxhumanatx.com/",
+            "venue":"St. Francis of Assisi Catholic Church",
+            "address": "8000 W. Eldorado Parkway",
+            "city": "Frisco",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.80302,32.858893
+            ]
+          },
+          "properties": {
+            "organization": "Vox Humana",
+            "timestamp":"2015-10-11T18:00",
+            "date": "Oct 11, 2015",
+            "time": "6:00 pm",
+            "title": "Sing Joyfully",
+            "url":"http://voxhumanatx.com/",
+            "venue":"University Park United Methodist Church",
+            "address": "4024 Caruth Blvd",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.796489,32.790807
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chambers Singers",
+            "timestamp":"2015-10-18T19:00",
+            "date": "Oct 18, 2015",
+            "time": "7:00 pm",
+            "title": "Masterworks Ancient & Modern",
+            "url":"http://www.orpheuschambersingers.org/events/special-events/",
+            "venue":"City Performance Hall",
+            "address": "2520 Flora Street",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.754983,32.832916
+            ]
+          },
+          "properties": {
+            "organization": "Vox Humana",
+            "timestamp":"2015-12-05T19:30",
+            "date": "Dec 5, 2015",
+            "time": "7:30 pm",
+            "title": "Serenity",
+            "url":"http://voxhumanatx.com/",
+            "venue":"St. Thomas Aquinas Catholic Church",
+            "address": "6306 Kenwood Ave",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.80302,32.858893
+            ]
+          },
+          "properties": {
+            "organization": "Vox Humana",
+            "timestamp":"2015-12-06T16:00",
+            "date": "Dec 6, 2015",
+            "time": "4:00 pm",
+            "title": "Holiday Pops",
+            "url":"http://voxhumanatx.com/",
+            "venue":"University Park United Methodist Church",
+            "address": "4024 Caruth Boulevard",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -97.380484,32.743954
+            ]
+          },
+          "properties": {
+            "organization": "Arlington Heights UMC Choir &amp; Orchestra",
+            "timestamp":"2015-12-13T19:00",
+            "date": "Dec 13, 2015",
+            "time": "7:00 pm",
+            "title": "Messiah",
+            "url":"",
+            "venue":"Arlington Heights United Methodist Church",
+            "address": "4200 Camp Bowie Blvd",
+            "city": "Fort Worth",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.787448,32.940838
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2015-12-17T20:00",
+            "date": "Dec 17, 2015",
+            "time": "8:00 pm",
+            "title": "An Orpheus Christmas",
+            "url":"http://www.orpheuschambersingers.org/events/special-events/",
+            "venue":"Episcopal Church of the Transfiguration",
+            "address": "14115 Hillcrest",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.754983,32.832916
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2015-12-19T19:00",
+            "date": "Dec 19, 2015",
+            "time": "7:00 pm",
+            "title": "An Orpheus Christmas",
+            "url":"http://www.orpheuschambersingers.org/events/special-events/",
+            "venue":"Saint Thomas Aquinas Catholic Church",
+            "address": "6306 Kenwood",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.650572,33.121957
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2015-12-20T19:00",
+            "date": "Dec 20, 2015",
+            "time": "7:00 pm",
+            "title": "An Orpheus Christmas",
+            "url":"http://www.orpheuschambersingers.org/events/special-events/",
+            "venue":"Saint Jude Catholic Church",
+            "address": "1515 N Greenville Ave",
+            "city": "Allen",
+            "country": "United States",
+            "state": "TX"
+          }
+        }
+      ]
+    }
+]
