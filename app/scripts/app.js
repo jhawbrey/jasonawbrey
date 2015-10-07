@@ -60,16 +60,21 @@
 	    $('nav li a.' + a).addClass('active');
 	    if(a !== 'hero') {
 	    	history.pushState(null, null, '#'+a);
-        if (window._gaq !== undefined) { window._gaq.push(['_trackPageview', '/'+a]); }
 	    } else {
 	    	history.pushState(null, null, '/');
-        if (window._gaq !== undefined) { window._gaq.push(['_trackPageview', '/']); }
 	    }
       if(a === 'biography' || a === 'audio' || a === 'repertoire') {
         $('label[for="nav-trigger"]').addClass('dark');
       } else {
         $('label[for="nav-trigger"]').removeClass('dark');
       }
+      
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Section',
+        eventAction: 'view',
+        eventLabel: a
+      });
 	  };
 	}
 
