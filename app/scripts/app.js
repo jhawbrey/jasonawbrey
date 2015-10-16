@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 /**
  * Sticky Header
  * --------------------------------------------------
@@ -68,7 +75,7 @@
       } else {
         $('label[for="nav-trigger"]').removeClass('dark');
       }
-      
+
       ga('send', {
         hitType: 'event',
         eventCategory: 'Section',

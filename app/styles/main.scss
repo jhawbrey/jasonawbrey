@@ -530,6 +530,11 @@ header {
   width:76%;
   margin:10px auto;
   padding:0;
+  iframe {
+    width:100%;
+    overflow:hidden;
+    border:0;
+  }
   @include mq-above($mq-small) {
     width:300px;
   }
