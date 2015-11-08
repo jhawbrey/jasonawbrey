@@ -1,8 +1,19 @@
 
+/**
+ * Preloader
+ * --------------------------------------------------
+ */
 
+;(function($, window, document, undefined) {
 
+  'use strict';
 
-
+    $(window).load(function() {
+        $('#preloader_3').fadeOut();
+        $('#preloader').delay(350).fadeOut('slow');
+        $('body').delay(350).css({'overflow':'visible'});
+    })
+})(jQuery, window, document);
 
 
 /**

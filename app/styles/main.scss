@@ -150,7 +150,59 @@ body {
   height:100%;
   line-height: $line-height-base;
   margin:0;
+  overflow:hidden;
   padding:0;
+}
+
+/* Preloader */
+
+#preloader {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#333;
+  z-index:99;
+
+}
+
+#loader {
+  position:absolute;
+  left:50%;
+  top:50%;
+  &:before {
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:blue;
+    content:'';
+    position:absolute;
+    background:#9b59b6;
+    animation: preloader_3_before 1.5s infinite ease-in-out;
+  }
+  &:after {
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:blue;
+    content:'';
+    position:absolute;
+    background:#2ecc71;
+    left:22px;
+    animation: preloader_3_after 1.5s infinite ease-in-out;
+  }
+}
+
+@keyframes preloader_3_before {
+    0% {transform: translateX(0px) rotate(0deg)}
+    50% {transform: translateX(50px) scale(1.2) rotate(260deg); background:#2ecc71;border-radius:0px;}
+      100% {transform: translateX(0px) rotate(0deg)}
+}
+@keyframes preloader_3_after {
+    0% {transform: translateX(0px)}
+    50% {transform: translateX(-50px) scale(1.2) rotate(-260deg);background:#9b59b6;border-radius:0px;}
+    100% {transform: translateX(0px)}
 }
 
 .title {
@@ -439,15 +491,17 @@ header {
     overflow: hidden;
 
     video {
-      position: absolute;
-      top: 0;
-      left: 0;
+      position: fixed;
+      top: 50%;
+      left: 50%;
       min-width: 100%;
       min-height: 100%;
       width: auto;
       height: auto;
       z-index: -100;
-      //background: url(../images/video-poster.png) no-repeat;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background:url(../images/video-poster.png) no-repeat top center;
       background-size: cover;
       .has-fixed-header & {
         position:absolute;
