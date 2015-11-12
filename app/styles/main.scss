@@ -620,8 +620,30 @@ header {
     background-size:cover;
     color:$white;
     h3 {
+      font-size:1.5em;
       margin:0;
+      font-weight:normal;
       font-family:$font-bold;
+    }
+    a {
+      &:link {
+        text-decoration:none;
+        color:$white;
+      }
+      &:visited {
+        color:$white;
+      }
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+    .readMore {
+      margin-left:10px;
+      font-family:$font-bold;
+    }
+    p {
+      margin:7px;
+      line-height:1.3em;
     }
     .titleBlock {
       background:#efefef;
@@ -633,6 +655,9 @@ header {
         float:left;
         margin:0 80px 40px 0;
       }
+    }
+    .reviewBlock {
+      padding: 0 0 36px 0;
     }
   }
   blockquote {
