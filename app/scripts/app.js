@@ -2,7 +2,7 @@
 /**
  * Preloader
  * --------------------------------------------------
- */
+
 
 ;(function($, window, document, undefined) {
 
@@ -14,7 +14,7 @@
         $('body').delay(350).css({'overflow':'visible'});
     })
 })(jQuery, window, document);
-
+*/
 
 /**
  * Sticky Header

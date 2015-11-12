@@ -150,11 +150,10 @@ body {
   height:100%;
   line-height: $line-height-base;
   margin:0;
-  overflow:hidden;
   padding:0;
 }
 
-/* Preloader */
+/* Preloader
 
 #preloader {
   position:fixed;
@@ -204,6 +203,7 @@ body {
     50% {transform: translateX(-50px) scale(1.2) rotate(-260deg);background:#9b59b6;border-radius:0px;}
     100% {transform: translateX(0px)}
 }
+*/
 
 .title {
   text-transform:uppercase;
