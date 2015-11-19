@@ -155,6 +155,72 @@
             "country": "United States",
             "state": "TX"
           }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.754983,32.832916
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2016-02-27T19:00",
+            "date": "Feb 27, 2016",
+            "time": "7:00 pm",
+            "title": "The Darkness is No Darkness",
+            "url":"http://www.orpheuschambersingers.org/events/special-events/",
+            "venue":"Saint Thomas Aquinas Catholic Church",
+            "address": "6306 Kenwood",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -95.36921289999998,29.7616498
+            ]
+          },
+          "properties": {
+            "organization": "Ars Lyrica",
+            "timestamp":"2016-04-02T19:30",
+            "date": "Apr 2, 2016",
+            "time": "7:30 pm",
+            "title": "An Easter Messiah",
+            "url":"http://www.arslyricahouston.org/2015-2016-season-events/2016/4/2/an-easter-messiah",
+            "venue":"Hobby Center for the Performing Arts",
+            "address": "800 Bagby St",
+            "city": "Houston",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.796489,32.790807
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2016-04-03T18:00",
+            "date": "Apr 3, 2016",
+            "time": "6:00 pm",
+            "title": "Handel's Messiah",
+            "url":"http://www.orpheuschambersingers.org/events/special-events/",
+            "venue":"City Performance Hall",
+            "address": "2520 Flora Street",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
         }
       ]
     }
