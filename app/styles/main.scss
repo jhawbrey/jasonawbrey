@@ -443,7 +443,10 @@ header {
         b {
           font-family:$font-bold;
           font-weight:normal;
-          margin-left:-13px;
+          margin-left:-4px;
+          @include mq-above($mq-medium) {
+            margin-left:-13px;
+          }
         }
       }
     }
@@ -492,7 +495,7 @@ header {
     overflow: hidden;
 
     video {
-      position: fixed;
+      position: absolute;
       top: 50%;
       left: 50%;
       min-width: 100%;
@@ -623,7 +626,7 @@ header {
       font-size:1.5em;
       margin:0;
       font-weight:normal;
-      font-family:$font-bold;
+      font-family:$font-family;
     }
     a {
       &:link {
