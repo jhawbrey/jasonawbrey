@@ -16,6 +16,10 @@ module.exports = function (grunt) {
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
+  //vars for Heroku setup
+  var pkg = grunt.file.readJSON('package.json');
+  var herokuAppName = pkg.name.replace(/[^a-z0-9]/gi, '');
+
   // Configurable paths
   var config = {
     app: 'app',
@@ -27,6 +31,120 @@ module.exports = function (grunt) {
 
     // Project settings
     config: config,
+
+    //Heroku Settings (Create Heroku Deploy Folder)
+    mkdir: {
+      heroku: {
+    	options: {
+    	  create: ['heroku']
+    	},
+      },
+    },
+    //Heroku Settings
+    'file-creator': {
+    	heroku: {
+    		files: [{
+    			//Create Procfile required by Heroku
+    			file: 'heroku/Procfile',
+    			method: function(fs, fd, done) {
+    				fs.writeSync(fd, 'web: node server.js');
+    				done();
+    			}
+    		}, {
+    			//Create package.json for Heroku for adding dependencies (ExpressJS)
+    			file: 'heroku/package.json',
+    			method: function(fs, fd, done) {
+    				var min = grunt.option('min');
+    				fs.writeSync(fd, '{\n');
+    				fs.writeSync(fd, '  "name": ' + (pkg.name ? '"' + pkg.name + '"' : '""') + ',\n');
+    				fs.writeSync(fd, '  "version": ' + (pkg.version ? '"' + pkg.version + '"' : '""') + ',\n');
+    				fs.writeSync(fd, '  "description": ' + (pkg.description ? '"' + pkg.description + '"' : '""') + ',\n');
+    				fs.writeSync(fd, '  "main": "server.js",\n');
+    				fs.writeSync(fd, '  "dependencies": {\n');
+    				fs.writeSync(fd, '    "express": "3.*"');
+    				if (min) {
+    					fs.writeSync(fd, '\n');
+    				} else {
+    					fs.writeSync(fd, ',\n    "bower": "^1.3"\n');
+    				}
+    				fs.writeSync(fd, '  },\n');
+    				fs.writeSync(fd, '  "scripts": {\n');
+    				fs.writeSync(fd, '    "start": "node server.js"');
+    				if (min) {
+    					fs.writeSync(fd, '\n');
+    				} else {
+    					fs.writeSync(fd, ',\n    "postinstall": "bower install"\n');
+    				}
+    				fs.writeSync(fd, '  },\n');
+    				fs.writeSync(fd, '  "author": ' + (pkg.author ? '"' + pkg.author + '"' : '""') + ',\n');
+    				fs.writeSync(fd, '  "license": ' + (pkg.license ? '"' + pkg.license + '"' : '""') + '\n');
+    				fs.writeSync(fd, '}');
+    				done();
+    			}
+    		}, {
+    			//Create server.js used by ExpressJS within Heroku
+    			file: 'heroku/server.js',
+    			method: function(fs, fd, done) {
+    				var useAuth = false;
+    				fs.writeSync(fd, 'var express = require("express");\n');
+    				fs.writeSync(fd, 'var app = express();\n');
+    				if (useAuth) {
+    					var userName = 'test';
+    					var password = 'password1';
+    					fs.writeSync(fd, 'app.use(express.basicAuth("' + userName + '", "' + password + '"));\n');
+    				}
+    				fs.writeSync(fd, 'app.use(express.static(__dirname));\n');
+    				fs.writeSync(fd, 'app.get("/", function(req, res){\n');
+    				fs.writeSync(fd, '  res.sendfile("/index.html");\n');
+    				fs.writeSync(fd, '});\n');
+    				fs.writeSync(fd, 'var port = process.env.PORT || 9000;\n');
+    				fs.writeSync(fd, 'app.listen(port, function() {\n');
+    				fs.writeSync(fd, '    console.log("Listening on port " + port);\n');
+    				fs.writeSync(fd, '});');
+    				done();
+    			}
+    		}, {
+    			//Add .gitignore to ensure node_modules folder doesn't get uploaded
+    			file: 'heroku/.gitignore',
+    			method: function(fs, fd, done) {
+    				fs.writeSync(fd, 'node_modules');
+    				done();
+    			}
+    		}]
+    	}
+    },
+    //Heroku Settings (These provide commands for creating and deploying to Heroku)
+    shell: {
+    	'heroku-create': {
+    		command: [
+    			'cd heroku',
+    			'heroku create ' + herokuAppName,
+    			'heroku config:set PORT=80 --app ' + herokuAppName
+    		].join('&&')
+    	},
+    	'heroku-dyno': {
+    		command: [
+    			'cd heroku',
+    			'heroku ps:scale web=1 --app ' + herokuAppName
+    		].join('&&')
+    	},
+    	'heroku-git-init': {
+    		command: [
+    			'cd heroku',
+    			'git init',
+    			'git remote add ' + herokuAppName + ' git@heroku.com:' + herokuAppName + '.git',
+    		].join('&&')
+    	},
+    	'heroku-git-push': {
+    		command: [
+    			'cd heroku',
+    			'git add -A',
+    			'git commit -m "' + (grunt.option('gitm') ? grunt.option('gitm') : 'updated') + '"',
+    			//'START /WAIT git push ' + herokuAppName + ' master',
+    			'heroku open --app ' + herokuAppName
+    		].join('&&')
+    	}
+    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -120,6 +238,19 @@ module.exports = function (grunt) {
             '<%= config.dist %>/*',
             '!<%= config.dist %>/.git*'
           ]
+        }]
+      },
+      //Heroku Settings (These ensure you don't overwrite any files on subsequent pushes to Heroku)
+      heroku: {
+        files: [{
+      	  dot: true,
+      	  src: [
+      		  'heroku/*',
+      		  '!heroku/.git*',
+      		  '!heroku/.gitignore',
+      		  '!heroku/.server.js',
+      		  '!heroku/.Procfile'
+      	  ]
         }]
       },
       server: '.tmp'
@@ -335,6 +466,33 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>/.htaccess'
         }]
       },
+      //Heroku Settings
+      heroku: {
+        files: [{
+      	  dest: 'heroku/bower.json',
+      	  src: 'bower.json'
+        }, {
+      	  expand: true,
+      	  dot: true,
+      	  cwd: '<%= config.app %>',
+      	  dest: 'heroku',
+      	  src: [
+      		  '**'
+      	  ]
+        }]
+      },
+      //Heroku Settings
+      herokumin: {
+        files: [{
+      	  expand: true,
+      	  dot: true,
+      	  cwd: '<%= config.dist %>',
+      	  dest: 'heroku',
+      	  src: [
+      		  '**'
+      	  ]
+        }]
+      },
       styles: {
         expand: true,
         dot: true,
@@ -421,4 +579,46 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('heroku', function(method) {
+    if (typeof grunt.option('min') === 'undefined') {
+  	  grunt.option('min', true);
+    }
+    if (grunt.option('min')) {
+  	  grunt.option('cwd', 'dist');
+    } else {
+  	  grunt.option('cwd', 'app');
+    }
+    grunt.task.run([
+  	  'clean:heroku',
+  	  'file-creator:heroku'
+    ]);
+    if (grunt.option('min')) {
+  	  grunt.task.run([
+  		  'copy:herokumin'
+  	  ]);
+    } else {
+  	  grunt.task.run([
+  		  'copy:heroku'
+  	  ]);
+    }
+    switch (method) {
+  	  case 'init':
+  		  grunt.task.run([
+  			  'shell:heroku-create',
+  			  'shell:heroku-git-init',
+  			  'shell:heroku-git-push',
+  			  'shell:heroku-dyno',
+  		  ]);
+  		  break;
+  	  case 'push':
+  		  grunt.task.run([
+  			  'shell:heroku-git-push'
+  		  ]);
+  		  break;
+  	  default:
+  		  console.log('heroku:' + method + ' is not a valid target.');
+  		  break;
+    }
+  });
 };
