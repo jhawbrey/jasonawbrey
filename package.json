@@ -2,6 +2,8 @@
   "name": "ja-static",
   "devDependencies": {
     "apache-server-configs": "^2.7.1",
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.0",
     "grunt-concurrent": "^0.5.0",
@@ -25,14 +27,15 @@
     "grunt-svgmin": "^0.4.0",
     "grunt-usemin": "^2.3.0",
     "grunt-wiredep": "^1.7.0",
+    "jit-grunt": "^0.9.1",
     "jshint-stylish": "^0.4.0",
     "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.4.0"
+    "serve-static": "^1.10.2",
+    "time-grunt": "^0.4.0",
+    "react-soundplayer": "^0.2.2"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "dependencies": {
-    "react-soundplayer": "^0.2.2"
-  }
+  "dependencies": {}
 }
