@@ -1,6 +1,5 @@
 // Generated on 2015-03-20 using
 // generator-webapp 0.5.1
-'use strict';
 
 // # Globbing
 // for performance reasons we're only matching one level down:
@@ -9,6 +8,8 @@
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
+
+  'use strict';
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -617,7 +618,7 @@ module.exports = function (grunt) {
   		  ]);
   		  break;
   	  default:
-  		  console.log('heroku:' + method + ' is not a valid target.');
+  		  
   		  break;
     }
   });
