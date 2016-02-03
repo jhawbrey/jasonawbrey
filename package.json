@@ -30,9 +30,10 @@
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^0.4.0",
     "load-grunt-tasks": "^0.4.0",
+    "newrelic": "^1.25.1",
+    "react-soundplayer": "^0.2.2",
     "serve-static": "^1.10.2",
-    "time-grunt": "^0.4.0",
-    "react-soundplayer": "^0.2.2"
+    "time-grunt": "^0.4.0"
   },
   "engines": {
     "node": ">=0.10.0"
