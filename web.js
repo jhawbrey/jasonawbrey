@@ -8,7 +8,7 @@ var app = express()
 
 app.use(compression())
 app.use(serveStatic(__dirname + '/dist', {
-  maxAge: 31536000,
+  maxAge: 2592000000,
   setHeaders: setCustomCacheControl
 }))
 
@@ -17,6 +17,6 @@ app.listen(process.env.PORT || 5000)
 function setCustomCacheControl(res, path) {
   if (serveStatic.mime.lookup(path) === 'text/html') {
     // Custom Cache-Control for HTML files
-    res.setHeader('Cache-Control', 'dist, max-age=0')
+    res.setHeader('Cache-Control', 'dist, max-age=2592000000')
   }
 }

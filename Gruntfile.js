@@ -367,11 +367,18 @@ module.exports = function (grunt) {
         assetsDirs: [
           '<%= config.dist %>',
           '<%= config.dist %>/images',
-          '<%= config.dist %>/styles'
-        ]
+          '<%= config.dist %>/styles',
+          '<%= config.dist %>/scripts'
+        ],
+        patterns: {
+            js: [
+                [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp))/gm, 'Update the JS to reference our revved images']
+            ]
+        }
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
-      css: ['<%= config.dist %>/styles/{,*/}*.css']
+      css: ['<%= config.dist %>/styles/{,*/}*.css'],
+      js: '<%= config.dist %>/js/*.js'
     },
 
     // The following *-min tasks produce minified files in the dist folder
@@ -618,7 +625,7 @@ module.exports = function (grunt) {
   		  ]);
   		  break;
   	  default:
-  		  
+
   		  break;
     }
   });
