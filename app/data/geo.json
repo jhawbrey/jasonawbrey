@@ -7,18 +7,84 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -96.796489,32.790807
+              10.388494,63.426885
             ]
           },
           "properties": {
-            "organization": "Orpheus Chambers Singers",
-            "timestamp":"2015-10-18T19:00",
-            "date": "Oct 18, 2015",
+            "organization": "Conspirare",
+            "timestamp":"2016-07-28T18:00",
+            "date": "July 28, 2016",
             "time": "7:00 pm",
-            "title": "Masterworks Ancient & Modern",
-            "url":"http://www.orpheuschambersingers.org/events/special-events/",
-            "venue":"City Performance Hall",
-            "address": "2520 Flora Street",
+            "title": "Olavsfestdagen",
+            "url":"http://www.olavsfestdagene.no/event/horte-pa-kormusikk-pa-fest/",
+            "venue":"Nidaros Cathedral",
+            "address": "Bispegata 11",
+            "city": "Trondheim",
+            "country": "Norway",
+            "state": "Norway"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              10.388494,63.426885
+            ]
+          },
+          "properties": {
+            "organization": "Conspirare",
+            "timestamp":"2016-07-29T18:00",
+            "date": "July 29, 2016",
+            "time": "7:00 pm",
+            "title": "Olavsfestdagen",
+            "url":"http://www.olavsfestdagene.no/event/horte-pa-kormusikk-pa-fest/",
+            "venue":"Nidaros Cathedral",
+            "address": "Bispegata 11",
+            "city": "Trondheim",
+            "country": "Norway",
+            "state": "Norway"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              10.388494,63.426885
+            ]
+          },
+          "properties": {
+            "organization": "Conspirare",
+            "timestamp":"2016-07-30T18:00",
+            "date": "July 30, 2016",
+            "time": "7:00 pm",
+            "title": "Olavsfestdagen",
+            "url":"http://www.olavsfestdagene.no/event/horte-pa-kormusikk-pa-fest//",
+            "venue":"Nidaros Cathedral",
+            "address": "Bispegata 11",
+            "city": "Trondheim",
+            "country": "Norway",
+            "state": "Norway"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.80302,32.858893
+            ]
+          },
+          "properties": {
+            "organization": "Vox Humana",
+            "timestamp":"2016-09-12T18:00",
+            "date": "Sept 12, 2016",
+            "time": "6:00 pm",
+            "title": "Brahms' Requiem",
+            "url":"http://www.voxhumanatx.org/",
+            "venue":"University Park UMC",
+            "address": "4024 Caruth Boulevard",
             "city": "Dallas",
             "country": "United States",
             "state": "TX"
@@ -29,18 +95,18 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -96.754983,32.832916
+              -96.796489,32.790807
             ]
           },
           "properties": {
-            "organization": "Vox Humana",
-            "timestamp":"2015-12-05T19:30",
-            "date": "Dec 5, 2015",
-            "time": "7:30 pm",
-            "title": "Serenity",
-            "url":"http://voxhumanatx.com/",
-            "venue":"St. Thomas Aquinas Catholic Church",
-            "address": "6306 Kenwood Ave",
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2016-10-16T19:00",
+            "date": "Oct 16, 2016",
+            "time": "7:00 pm",
+            "title": "100 Years of American Music",
+            "url":"http://www.orpheuschambersingers.org/",
+            "venue":"Dallas City Performance Hall",
+            "address": "2520 Flora Street",
             "city": "Dallas",
             "country": "United States",
             "state": "TX"
@@ -56,12 +122,12 @@
           },
           "properties": {
             "organization": "Vox Humana",
-            "timestamp":"2015-12-06T16:00",
-            "date": "Dec 6, 2015",
-            "time": "4:00 pm",
-            "title": "Holiday Pops",
-            "url":"http://voxhumanatx.com/",
-            "venue":"University Park United Methodist Church",
+            "timestamp":"2016-12-04T18:00",
+            "date": "Dec 4, 2016",
+            "time": "6:00 pm",
+            "title": "Christmas Concert",
+            "url":"http://www.voxhumanatx.org/",
+            "venue":"University Park UMC",
             "address": "4024 Caruth Boulevard",
             "city": "Dallas",
             "country": "United States",
@@ -73,129 +139,85 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -97.380484,32.743954
+              -96.79868, 32.78992
             ]
           },
           "properties": {
-            "organization": "Arlington Heights UMC Choir &amp; Orchestra",
-            "timestamp":"2015-12-13T19:00",
-            "date": "Dec 13, 2015",
-            "time": "7:00 pm",
-            "title": "Messiah",
-            "url":"",
-            "venue":"Arlington Heights United Methodist Church",
-            "address": "4200 Camp Bowie Blvd",
-            "city": "Fort Worth",
-            "country": "United States",
-            "state": "TX"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -96.787448,32.940838
-            ]
-          },
-          "properties": {
-            "organization": "Orpheus Chamber Singers",
-            "timestamp":"2015-12-17T20:00",
-            "date": "Dec 17, 2015",
-            "time": "8:00 pm",
-            "title": "An Orpheus Christmas",
-            "url":"http://www.orpheuschambersingers.org/events/special-events/",
-            "venue":"Episcopal Church of the Transfiguration",
-            "address": "14115 Hillcrest",
-            "city": "Dallas",
-            "country": "United States",
-            "state": "TX"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -96.754983,32.832916
-            ]
-          },
-          "properties": {
-            "organization": "Orpheus Chamber Singers",
-            "timestamp":"2015-12-19T19:00",
-            "date": "Dec 19, 2015",
-            "time": "7:00 pm",
-            "title": "An Orpheus Christmas",
-            "url":"http://www.orpheuschambersingers.org/events/special-events/",
-            "venue":"Saint Thomas Aquinas Catholic Church",
-            "address": "6306 Kenwood",
-            "city": "Dallas",
-            "country": "United States",
-            "state": "TX"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -96.650572,33.121957
-            ]
-          },
-          "properties": {
-            "organization": "Orpheus Chamber Singers",
-            "timestamp":"2015-12-20T19:00",
-            "date": "Dec 20, 2015",
-            "time": "7:00 pm",
-            "title": "An Orpheus Christmas",
-            "url":"http://www.orpheuschambersingers.org/events/special-events/",
-            "venue":"Saint Jude Catholic Church",
-            "address": "1515 N Greenville Ave",
-            "city": "Allen",
-            "country": "United States",
-            "state": "TX"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -96.754983,32.832916
-            ]
-          },
-          "properties": {
-            "organization": "Orpheus Chamber Singers",
-            "timestamp":"2016-02-27T19:00",
-            "date": "Feb 27, 2016",
-            "time": "7:00 pm",
-            "title": "The Darkness is No Darkness",
-            "url":"http://www.orpheuschambersingers.org/events/special-events/",
-            "venue":"Saint Thomas Aquinas Catholic Church",
-            "address": "6306 Kenwood",
-            "city": "Dallas",
-            "country": "United States",
-            "state": "TX"
-          }
-        },
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -95.36921289999998,29.7616498
-            ]
-          },
-          "properties": {
-            "organization": "Ars Lyrica",
-            "timestamp":"2016-04-02T19:30",
-            "date": "Apr 2, 2016",
+            "organization": "GDYO and CCGD",
+            "timestamp":"2016-12-14T19:30",
+            "date": "Dec 4, 2016",
             "time": "7:30 pm",
-            "title": "An Easter Messiah",
-            "url":"http://www.arslyricahouston.org/2015-2016-season-events/2016/4/2/an-easter-messiah",
-            "venue":"Hobby Center for the Performing Arts",
-            "address": "800 Bagby St",
-            "city": "Houston",
+            "title": "Christmas Concert",
+            "url":"http://gdyo.org/",
+            "venue":"Meyerson Symphony Center",
+            "address": "2301 Flora Street",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.7969880, 32.7766640
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2016-12-17T19:00",
+            "date": "Dec 17, 2016",
+            "time": "7:00 pm",
+            "title": "Christmas Concert",
+            "url":"http://www.orpheuschambersingers.org/",
+            "venue":"TBD",
+            "address": "TBD",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.7969880, 32.7766640
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2016-12-18T19:00",
+            "date": "Dec 18, 2016",
+            "time": "7:00 pm",
+            "title": "Christmas Concert",
+            "url":"http://www.orpheuschambersingers.org/",
+            "venue":"TBD",
+            "address": "TBD",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.7969880, 32.7766640
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2016-12-20T19:00",
+            "date": "Dec 18, 2016",
+            "time": "7:00 pm",
+            "title": "Christmas Concert",
+            "url":"http://www.orpheuschambersingers.org/",
+            "venue":"TBD",
+            "address": "TBD",
+            "city": "Dallas",
             "country": "United States",
             "state": "TX"
           }
@@ -210,13 +232,35 @@
           },
           "properties": {
             "organization": "Orpheus Chamber Singers",
-            "timestamp":"2016-04-03T18:00",
-            "date": "Apr 3, 2016",
-            "time": "6:00 pm",
-            "title": "Handel's Messiah",
-            "url":"http://www.orpheuschambersingers.org/events/special-events/",
-            "venue":"City Performance Hall",
+            "timestamp":"2017-02-17T19:00",
+            "date": "Feb 26, 2017",
+            "time": "7:00 pm",
+            "title": "Love Songs",
+            "url":"http://www.orpheuschambersingers.org/",
+            "venue":"Dallas City Performance Hall",
             "address": "2520 Flora Street",
+            "city": "Dallas",
+            "country": "United States",
+            "state": "TX"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -96.754983,32.832916
+            ]
+          },
+          "properties": {
+            "organization": "Orpheus Chamber Singers",
+            "timestamp":"2017-04-08T19:00",
+            "date": "Apr 8, 2017",
+            "time": "7:00 pm",
+            "title": "Sacred Music",
+            "url":"http://www.orpheuschambersingers.org/",
+            "venue":"St. Thomas Aquinas Catholic Church",
+            "address": "6306 Kenwood Ave",
             "city": "Dallas",
             "country": "United States",
             "state": "TX"

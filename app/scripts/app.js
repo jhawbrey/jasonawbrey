@@ -126,7 +126,7 @@
 
   geojson.done(function(data) {
     var map = L.mapbox.map('map', 'examples.map-i80bb8p3')
-    .setView([32.790807, -96.796489], 16);
+    .setView([63.426885,10.388494], 16);
 
     // Disable drag and zoom handlers.
     map.dragging.disable();
